@@ -22,7 +22,7 @@ public:
 
 class personal
 {
-
+public:
     string personname;
     int age;
     void personalsetter()
@@ -32,14 +32,48 @@ class personal
         getline(cin,personname);
         cout<<"Enter Age";
         cin>>age;
+
     }
 };
 
-class customer: public bank,public personal{
+class customer: public bank,public personal
+{
+public:
+    void deposit()
+    {
 
-void deposit(){
+        int deposit;
+        cout<<"Enter the amount Deposited"<<endl;
+        cin>>deposit;
+        balance+=deposit;
+        cout<<balance;
 
+    }
+    void withdraw()
+    {
 
-}
+        int withdraw;
+        cout<<"Enter the amount Withdrawn"<<endl;
+        cin>>withdraw;
+        balance+=withdraw;
+        cout<<balance;
+
+    }
 
 };
+
+main()
+{
+
+    customer c;
+    c.banksetter();
+    c.bankname;
+    c.accountnum;
+    c.balance;
+    c.personalsetter();
+    c.personname;
+    c.age;
+    c.deposit();
+    c.withdraw();
+
+}
